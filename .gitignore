@@ -1,0 +1,33 @@
+# Node.js dependencies
+node_modules/
+expense-tracker-frontend/node_modules/
+expense-tracker-backend/node_modules/
+
+dist/
+build/
+expense-tracker-frontend/build/
+expense-tracker-frontend/dist/
+
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore environment variables
+.env
+expense-tracker-frontend/.env
+expense-tracker-backend/.env
+
+# Ignore database-related files (if any)
+*.sqlite
+*.sqlite-journal
+db.sqlite3
+
+# Ignore local VSCode settings
+.vscode/
+.idea/
+*.iml
+
+# Ignore MacOS system files
+.DS_Store
