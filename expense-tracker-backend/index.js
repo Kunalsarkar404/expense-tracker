@@ -11,9 +11,16 @@ const PORT = process.env.PORT || 8000;
 const CORS_ORIGIN = process.env.CORS_ORIGIN || "http://localhost:5173";
 
 // Middleware
-app.use(cors({ origin: CORS_ORIGIN, credentials: true }));
+app.use(cors({
+    origin: CORS_ORIGIN,
+    credentials: true, 
+    methods: ["GET", "POST", "PUT", "DELETE"], 
+    allowedHeaders: ["Content-Type", "Authorization"],
+}));
+
 app.use(express.json());
 app.use(cookieParser());
+
 
 //Route
 app.use("/api/auth", authRoutes)
