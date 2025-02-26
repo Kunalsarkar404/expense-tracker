@@ -8,9 +8,10 @@ const budgetRoutes = require("./routes/budgetRoutes");
 
 const app = express();
 const PORT = process.env.PORT || 8000;
+const CORS_ORIGIN = process.env.CORS_ORIGIN || "http://localhost:5173";
 
-//Middleware
-app.use(cors({origin: "http://localhost:5173", credentials: true}));
+// Middleware
+app.use(cors({ origin: CORS_ORIGIN, credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 
