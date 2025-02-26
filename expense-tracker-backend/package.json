@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
+   "dev": "nodemon index.js",
+    "start": "node index.js",
+    "postinstall": "prisma migrate deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["expense-tracker", "backend", "express", "prisma"],
   "author": "",
   "license": "ISC",
   "description": "",
